@@ -11,6 +11,7 @@ class ShopSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     shop = serializers.StringRelatedField()
+
     class Meta:
         model = Product
         fields = ('id', 'name', 'category', 'description', 'quantity', 'price', 'shop')
